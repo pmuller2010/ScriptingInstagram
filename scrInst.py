@@ -17,8 +17,11 @@ import time
 import os
 import wget
 
+path = os.getcwd()
 
-driver = webdriver.Chrome('F:/GitHub/ScrInstagram/chromedriver.exe')
+# driver = webdriver.Chrome('F:/GitHub/ScripyngInstagram/chromedriver.exe')
+driver = webdriver.Chrome(path + '\chromedriver.exe')
+
 driver.get('https://www.instagram.com')
 
 
@@ -91,7 +94,7 @@ for a in anchors:
 
 images[:5]
 
-path = os.getcwd()
+
 path = os.path.join(path, keyword[1:] + "s")
 
 # create the directory

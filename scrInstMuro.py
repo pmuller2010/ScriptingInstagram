@@ -14,8 +14,10 @@ import time
 import os
 import wget
 
+path = os.getcwd()
 
-driver = webdriver.Chrome('F:/GitHub/ScrInstagram/chromedriver.exe')
+# driver = webdriver.Chrome('F:/GitHub/ScrInstagram/chromedriver.exe')
+driver = webdriver.Chrome(path + '\chromedriver.exe')
 driver.get('https://www.instagram.com')
 
 
@@ -88,7 +90,7 @@ print('Cantidad de Imagenes : ' + str(len(anchors)))
 
 # images[:5]
 
-path = os.getcwd()
+# path = os.getcwd()
 path = os.path.join(path, keyword)
 
 # create the directory

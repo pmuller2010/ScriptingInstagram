@@ -16,9 +16,10 @@ import time
 import os
 import wget
 
+path = os.getcwd()
 
 # specify the path to chromedriver.exe (download and save on your computer)
-driver = webdriver.Chrome('F:/GitHub/ScrInstagram/chromedriver.exe')
+driver = webdriver.Chrome(path + '\chromedriver.exe')
 
 # open the webpage
 driver.get("http://www.instagram.com")
@@ -75,7 +76,6 @@ images = images[:-2]
 print('Number of scraped images: ', len(images))
 
 
-path = os.getcwd()
 path = os.path.join(path, keyword[1:] + "s")
 
 # create the directory
